@@ -1,0 +1,57 @@
+.gl-footer {
+  background: var(--bg-raised);
+  margin-top: var(--space-6);
+}
+
+.gl-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-4);
+}
+
+.gl-footer__brand-mark {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--cream);
+}
+
+.gl-footer__tagline {
+  margin-top: var(--space-1);
+  color: var(--text-faint);
+  font-size: 0.9rem;
+}
+
+.gl-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 0.9rem;
+}
+
+.gl-footer__col-title {
+  color: var(--gold);
+  font-size: 0.8rem;
+  margin-bottom: var(--space-1);
+}
+
+.gl-footer__col a {
+  color: var(--text-muted);
+  transition: color 0.2s var(--ease-soft);
+}
+
+.gl-footer__col a:hover { color: var(--gold-bright); }
+
+.gl-footer__legal {
+  padding: var(--space-3) var(--content-pad);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+@media (max-width: 720px) {
+  .gl-footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}
