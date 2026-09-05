@@ -1,0 +1,43 @@
+.gl-card {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.gl-card__media {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gl-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gl-card__body {
+  padding-top: var(--space-2);
+}
+
+.gl-card__name {
+  font-family: var(--font-heading);
+  color: var(--cream);
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.gl-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.gl-card__price { color: var(--gold-bright); }
+
+.gl-card__unavailable {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+}
