@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golden Loaf Bakery — Freshly Baked. Made With Care.</title>
+  <meta name="description" content="The Golden Loaf Bakery. Fresh bread, pastries and cakes baked daily." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/components/navbar/navbar.css" />
+  <link rel="stylesheet" href="/components/footer/footer.css" />
+  <link rel="stylesheet" href="/pages/home/home.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="gl-navbar" data-navbar>
+    <div class="container gl-navbar__inner">
+      <a href="/pages/home/home.html" class="gl-navbar__brand">
+        <span class="gl-navbar__brand-mark">The Golden Loaf</span>
+      </a>
+      <nav class="gl-navbar__links" aria-label="Primary">
+        <a href="/pages/home/home.html" data-nav="home">Home</a>
+        <a href="/pages/shop/shop.html" data-nav="shop">Shop</a>
+        <a href="/pages/about/about.html" data-nav="about">About</a>
+        <a href="/pages/contact/contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <button class="gl-navbar__menu-btn" type="button" aria-expanded="false" aria-controls="gl-mobile-menu" data-navbar-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+    <nav id="gl-mobile-menu" class="gl-navbar__mobile" aria-label="Mobile" data-mobile-menu>
+      <a href="/pages/home/home.html" data-nav="home">Home</a>
+      <a href="/pages/shop/shop.html" data-nav="shop">Shop</a>
+      <a href="/pages/about/about.html" data-nav="about">About</a>
+      <a href="/pages/contact/contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="gl-hero">
+      <div class="gl-hero__media gl-imgph" data-photo-brief="Fresh sourdough loaves cooling on a wooden rack, warm oven light, shallow depth of field"></div>
+      <div class="gl-hero__scrim"></div>
+      <div class="container gl-hero__content">
+        <p class="gl-hero__eyebrow">Baked before sunrise, every day</p>
+        <h1 class="gl-hero__title">Freshly baked<br />every single day</h1>
+        <p class="gl-hero__sub">We bake with passion, using the finest ingredients to bring you the most delicious experience.</p>
+        <a href="/pages/shop/shop.html" class="btn btn-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- 2. BAKERY HIGHLIGHTS -->
+    <section class="gl-highlights">
+      <div class="container gl-highlights__grid">
+        <div class="gl-highlights__item">
+          <h3>Milled fresh, baked slow</h3>
+          <p>Our dough proofs for over eighteen hours before it ever sees the oven.</p>
+        </div>
+        <hr class="hairline gl-highlights__rule" />
+        <div class="gl-highlights__item">
+          <h3>No shortcuts, no additives</h3>
+          <p>Flour, water, salt, time. That's the whole list for our breads.</p>
+        </div>
+        <hr class="hairline gl-highlights__rule" />
+        <div class="gl-highlights__item">
+          <h3>From our oven to your table</h3>
+          <p>Everything you see was baked in this building, this morning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BEST SELLERS -->
+    <section class="gl-section">
+      <div class="container">
+        <div class="gl-section__head">
+          <h2>Best sellers</h2>
+          <a href="/pages/shop/shop.html" class="gl-section__link">View shop</a>
+        </div>
+      </div>
+      <div class="gl-rail container" data-bestsellers>
+        <!-- Populated by home.js from the backend. No hardcoded products. -->
+      </div>
+    </section>
+
+    <!-- 4. SPECIAL OFFER -->
+    <section class="gl-offer">
+      <div class="gl-offer__media gl-imgph" data-photo-brief="Close-up of a golden croissant on a marble counter"></div>
+      <div class="container gl-offer__content">
+        <p class="gl-offer__eyebrow">This week only</p>
+        <h2>Buy two loaves,<br />bring home a third</h2>
+        <p>Applies to any bread on the shelf. Ends Sunday.</p>
+        <a href="/pages/shop/shop.html" class="btn btn-outline">See what qualifies</a>
+      </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US -->
+    <section class="gl-section">
+      <div class="container">
+        <h2>Why choose us</h2>
+        <div class="gl-why__grid">
+          <div class="gl-why__item">
+            <h3>Baked daily</h3>
+            <p>Nothing sits overnight. What doesn't sell by evening doesn't go out again tomorrow.</p>
+          </div>
+          <div class="gl-why__item">
+            <h3>Real ingredients</h3>
+            <p>Local flour, real butter, cane sugar. We can name every ingredient in every recipe.</p>
+          </div>
+          <div class="gl-why__item">
+            <h3>Made by hand</h3>
+            <p>Shaped, scored, and watched through the window by the same hands every morning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FRESH FROM THE OVEN -->
+    <section class="gl-section">
+      <div class="container">
+        <div class="gl-section__head">
+          <h2>Fresh from the oven</h2>
+        </div>
+      </div>
+      <div class="gl-rail container" data-fresh>
+        <!-- Populated by home.js from the backend. No hardcoded products. -->
+      </div>
+    </section>
+
+    <!-- 7. BAKERY STORIES (optional posts) -->
+    <section class="gl-section">
+      <div class="container">
+        <div class="gl-section__head">
+          <h2>From the bakery</h2>
+        </div>
+        <div class="gl-stories" data-stories>
+          <!-- Populated by home.js from the backend. Empty/error state handled in JS. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SERVICE HIGHLIGHTS -->
+    <section class="gl-services">
+      <div class="container gl-services__grid">
+        <div class="gl-services__item">
+          <h3>Pickup</h3>
+          <p>Order ahead, skip the line.</p>
+        </div>
+        <div class="gl-services__item">
+          <h3>Custom cakes</h3>
+          <p>Tell us the occasion, we'll handle the rest.</p>
+        </div>
+        <div class="gl-services__item">
+          <h3>Local delivery</h3>
+          <p>Fresh to your door, same morning.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="gl-footer">
+    <div class="container gl-footer__inner">
+      <div class="gl-footer__brand">
+        <span class="gl-footer__brand-mark">The Golden Loaf</span>
+        <p class="gl-footer__tagline">Freshly Baked. Made With Care.</p>
+      </div>
+      <nav class="gl-footer__col" aria-label="Site">
+        <span class="gl-footer__col-title">Site</span>
+        <a href="/pages/home/home.html">Home</a>
+        <a href="/pages/shop/shop.html">Shop</a>
+        <a href="/pages/about/about.html">About</a>
+        <a href="/pages/contact/contact.html">Contact</a>
+      </nav>
+      <div class="gl-footer__col">
+        <span class="gl-footer__col-title">Visit</span>
+        <span>Open daily, 6am – 7pm</span>
+        <span>123 Baker Street</span>
+      </div>
+    </div>
+    <hr class="hairline" />
+    <div class="container gl-footer__legal">
+      <span>© <span data-year></span> The Golden Loaf Bakery</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/pages/home/home.js"></script>
+</body>
+</html>
