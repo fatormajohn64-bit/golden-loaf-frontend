@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — The Golden Loaf Bakery</title>
+  <meta name="description" content="Browse fresh bread, pastries, cakes and more from The Golden Loaf Bakery." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../styles/tokens.css" />
+  <link rel="stylesheet" href="../../components/navbar/navbar.css" />
+  <link rel="stylesheet" href="../../components/footer/footer.css" />
+  <link rel="stylesheet" href="../../components/product-card/product-card.css" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="gl-navbar" data-navbar>
+    <div class="container gl-navbar__inner">
+      <a href="../home/home.html" class="gl-navbar__brand">
+        <span class="gl-navbar__brand-mark">The Golden Loaf</span>
+      </a>
+      <nav class="gl-navbar__links" aria-label="Primary">
+        <a href="../home/home.html" data-nav="home">Home</a>
+        <a href="shop.html" data-nav="shop">Shop</a>
+        <a href="../about/about.html" data-nav="about">About</a>
+        <a href="../contact/contact.html" data-nav="contact">Contact</a>
+      </nav>
+      <button class="gl-navbar__menu-btn" type="button" aria-expanded="false" aria-controls="gl-mobile-menu" data-navbar-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+    <nav id="gl-mobile-menu" class="gl-navbar__mobile" aria-label="Mobile" data-mobile-menu>
+      <a href="../home/home.html" data-nav="home">Home</a>
+      <a href="shop.html" data-nav="shop">Shop</a>
+      <a href="../about/about.html" data-nav="about">About</a>
+      <a href="../contact/contact.html" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SHOP HERO -->
+    <section class="gl-shop-hero">
+      <div class="container">
+        <p class="gl-shop-hero__eyebrow">The full case</p>
+        <h1>Shop</h1>
+        <p class="gl-shop-hero__sub">Everything baked today, in one place.</p>
+      </div>
+    </section>
+
+    <!-- CATEGORY FILTER -->
+    <section class="gl-filter-bar">
+      <div class="container gl-filter-bar__inner" role="tablist" aria-label="Product categories" data-category-filter>
+        <button class="gl-chip" data-category="all" aria-pressed="true">All Products</button>
+        <button class="gl-chip" data-category="bread" aria-pressed="false">Breads</button>
+        <button class="gl-chip" data-category="pastry" aria-pressed="false">Pastries</button>
+        <button class="gl-chip" data-category="cake" aria-pressed="false">Cakes</button>
+        <button class="gl-chip" data-category="bun" aria-pressed="false">Buns</button>
+        <button class="gl-chip" data-category="cookie" aria-pressed="false">Cookies</button>
+        <button class="gl-chip" data-category="drink" aria-pressed="false">Drinks</button>
+      </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section class="gl-section">
+      <div class="container">
+        <div class="gl-shop-grid" data-product-grid>
+          <!-- Populated by shop.js from the backend. No hardcoded products. -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="gl-footer">
+    <div class="container gl-footer__inner">
+      <div class="gl-footer__brand">
+        <span class="gl-footer__brand-mark">The Golden Loaf</span>
+        <p class="gl-footer__tagline">Freshly Baked. Made With Care.</p>
+      </div>
+      <nav class="gl-footer__col" aria-label="Site">
+        <span class="gl-footer__col-title">Site</span>
+        <a href="../home/home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="../about/about.html">About</a>
+        <a href="../contact/contact.html">Contact</a>
+      </nav>
+      <div class="gl-footer__col">
+        <span class="gl-footer__col-title">Visit</span>
+        <span>Open daily, 6am – 7pm</span>
+        <span>123 Baker Street</span>
+      </div>
+    </div>
+    <hr class="hairline" />
+    <div class="container gl-footer__legal">
+      <span>© <span data-year></span> The Golden Loaf Bakery</span>
+    </div>
+  </footer>
+
+  <script type="module" src="shop.js"></script>
+</body>
+</html>
