@@ -1,1 +1,100 @@
+/* ---------- About hero ---------- */
+.gl-about-hero {
+  padding: var(--space-6) 0 var(--space-4);
+}
+.gl-about-hero__eyebrow {
+  color: var(--gold-bright);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-1);
+}
+.gl-about-hero h1 {
+  font-size: var(--step-3);
+  margin-bottom: var(--space-1);
+}
+.gl-about-hero__sub {
+  color: var(--text-muted);
+  max-width: 46ch;
+}
 
+/* ---------- Story (image + text split) ---------- */
+.gl-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 60vh;
+  border: none;
+}
+.gl-story__media {
+  min-height: 320px;
+}
+.gl-story__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
+.gl-story__eyebrow {
+  color: var(--gold-bright);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-1);
+}
+.gl-story__content h2 {
+  font-size: var(--step-2);
+  margin-bottom: var(--space-2);
+}
+.gl-story__content p {
+  max-width: 46ch;
+}
+@media (max-width: 860px) {
+  .gl-story { grid-template-columns: 1fr; }
+  .gl-story__media { min-height: 260px; }
+}
+
+/* ---------- Our journey ---------- */
+.gl-journey h2 {
+  font-size: var(--step-2);
+  margin-bottom: var(--space-2);
+}
+.gl-journey p {
+  max-width: 60ch;
+}
+
+/* ---------- Our values ---------- */
+.gl-values-section {
+  background: var(--bg-raised);
+}
+.gl-values__grid {
+  margin-top: var(--space-3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+.gl-values__item h3 {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-1);
+}
+@media (max-width: 720px) {
+  .gl-values__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Why choose us (shared shape with Home) ---------- */
+.gl-why__grid {
+  margin-top: var(--space-3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.gl-why__item h3 {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-1);
+}
+@media (max-width: 720px) {
+  .gl-why__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Bakery image ---------- */
+.gl-about-image {
+  min-height: 50vh;
+  border-left: none;
+  border-right: none;
+}
