@@ -6,6 +6,7 @@
 }
 
 .gl-card__media {
+  position: relative;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   overflow: hidden;
@@ -16,6 +17,38 @@
   height: 100%;
   object-fit: cover;
 }
+
+.gl-card__badge {
+  position: absolute;
+  top: var(--space-1);
+  left: var(--space-1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.gl-card__wishlist {
+  position: absolute;
+  top: var(--space-1);
+  right: var(--space-1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(26, 19, 13, 0.55);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.gl-card__wishlist svg { width: 15px; height: 15px; }
+.gl-card__wishlist:hover { color: var(--gold-bright); }
 
 .gl-card__body {
   padding-top: var(--space-2);
@@ -40,4 +73,23 @@
 .gl-card__unavailable {
   color: var(--text-faint);
   font-size: 0.8rem;
+}
+
+.gl-card__cart-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease-soft), color 0.2s var(--ease-soft);
+}
+.gl-card__cart-btn svg { width: 14px; height: 14px; }
+.gl-card__cart-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-bright);
 }
