@@ -1,7 +1,7 @@
 import { initNavbar } from "../../components/navbar/navbar.js";
 import { initFooter } from "../../components/footer/footer.js";
 import { createProductCard } from "../../components/product-card/product-card.js";
-import { fetchFeaturedProducts, fetchProducts } from "../../services/products-api.js";
+import { fetchFeaturedProducts } from "../../services/products-api.js";
 import { fetchPosts } from "../../services/posts-api.js";
 
 initNavbar("home");
@@ -13,12 +13,7 @@ renderRail({
   emptyMessage: "No best sellers yet. Check back soon.",
 });
 
-renderRail({
-  container: document.querySelector("[data-fresh]"),
-  loader: () => fetchProducts(),
-  emptyMessage: "No products available yet.",
-});
-
+renderOffer();
 renderStories();
 
 async function renderRail({ container, loader, emptyMessage }) {
@@ -33,6 +28,38 @@ async function renderRail({ container, loader, emptyMessage }) {
     products.forEach((product) => container.appendChild(createProductCard(product)));
   } catch (err) {
     container.innerHTML = `<p class="gl-rail__error">Unable to load products. Please try again.</p>`;
+  }
+}
+
+/**
+ * Special Offer section is driven entirely by a Dashboard post
+ * (category: "offer"). If none exists yet, the section stays hidden —
+ * no placeholder/fake offer copy is ever shown.
+ */
+async function renderOffer() {
+  const section = document.querySelector("[data-offer-section]");
+  if (!section) return;
+
+  try {
+    const posts = await fetchPosts({ category: "offer" });
+    const offer = posts && posts[0];
+    if (!offer) return; // stays hidden
+
+    const image = section.querySelector("[data-offer-image]");
+    const title = section.querySelector("[data-offer-title]");
+    const body = section.querySelector("[data-offer-body]");
+
+    if (offer.imageUrl && image) {
+      image.src = offer.imageUrl;
+      image.alt = offer.title || "Special offer";
+    }
+    if (title) title.textContent = offer.title || "";
+    if (body) body.textContent = offer.content || "";
+
+    section.hidden = false;
+  } catch (err) {
+    // Network/backend error — leave the section hidden rather than
+    // showing broken or fake promotional content.
   }
 }
 
