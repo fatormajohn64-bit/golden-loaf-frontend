@@ -1,5 +1,10 @@
 import { apiGet } from "./api-config.js";
 
-export async function fetchPosts() {
-  return apiGet("/api/posts");
+/**
+ * GET /api/posts — backend only returns published posts to the public frontend.
+ * Optional params, e.g. { category: "offer" }, filter which posts come back.
+ */
+export async function fetchPosts(params = {}) {
+  const query = new URLSearchParams(params).toString();
+  return apiGet(`/api/posts${query ? `?${query}` : ""}`);
 }
