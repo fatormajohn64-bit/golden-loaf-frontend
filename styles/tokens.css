@@ -21,10 +21,10 @@
   --font-heading: "Fraunces", Georgia, serif;
   --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --step-0: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
-  --step-1: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
-  --step-2: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
-  --step-3: clamp(2.5rem, 2rem + 2vw, 4rem);
+  --step-0: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);      /* body */
+  --step-1: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);      /* small heading */
+  --step-2: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);         /* section heading */
+  --step-3: clamp(2.5rem, 2rem + 2vw, 4rem);              /* hero heading */
 
   /* Spacing scale */
   --space-1: 0.5rem;
@@ -136,4 +136,86 @@ img { max-width: 100%; display: block; }
 .btn-outline:hover {
   border-color: var(--gold);
   color: var(--gold-bright);
+}
+
+/* Small circular icon button — search, cart, social links */
+.gl-icon-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--cream);
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease-soft), color 0.2s var(--ease-soft);
+}
+.gl-icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+.gl-icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.gl-icon-btn__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+/* Tracked uppercase label with a small flourish on either side,
+   e.g. "— OUR BEST SELLERS —" */
+.gl-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.78rem;
+  color: var(--gold-bright);
+}
+.gl-eyebrow::before,
+.gl-eyebrow::after {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--gold-dim);
+}
+.gl-eyebrow--left {
+  justify-content: flex-start;
+}
+.gl-eyebrow--left::after {
+  display: none;
+}
+
+/* Circular outlined icon badge used above highlight/value copy */
+.gl-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  margin-bottom: var(--space-2);
+}
+.gl-icon-circle svg {
+  width: 24px;
+  height: 24px;
 }
