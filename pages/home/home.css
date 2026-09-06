@@ -147,6 +147,28 @@
   padding: var(--space-3) 0;
 }
 
+/* ---------- Fresh from the oven (static photo gallery) ---------- */
+.gl-fresh-gallery {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  scroll-snap-type: x proximity;
+}
+.gl-fresh-gallery::-webkit-scrollbar { height: 6px; }
+.gl-fresh-gallery::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+.gl-fresh-gallery img {
+  flex: 0 0 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  scroll-snap-align: start;
+  transition: transform 0.3s var(--ease-soft);
+}
+.gl-fresh-gallery img:hover {
+  transform: scale(1.03);
+}
+
 /* ---------- Special offer ---------- */
 .gl-offer {
   position: relative;
