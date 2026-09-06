@@ -28,15 +28,6 @@
         <a href="../about/about.html" data-nav="about">About</a>
         <a href="../contact/contact.html" data-nav="contact">Contact</a>
       </nav>
-      <div class="gl-navbar__actions">
-        <button class="gl-icon-btn" type="button" aria-label="Search">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        <button class="gl-icon-btn" type="button" aria-label="Cart, 0 items" data-cart-btn>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
-          <span class="gl-icon-btn__badge" data-cart-count>0</span>
-        </button>
-      </div>
     </div>
   </header>
 
@@ -64,24 +55,36 @@
           <div class="gl-icon-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2c1 3-1 4-1 6a3 3 0 0 0 6 0c0-2-2-3-1-6-3 1-6 3-6 8a6 6 0 1 0 12 0c0-5-3-7-6-8h-4z"/></svg>
           </div>
-          <h3>Milled fresh, baked slow</h3>
-          <p>Our dough proofs for over eighteen hours before it ever sees the oven.</p>
+          <h3>Quality Ingredients</h3>
+          <p>Only the best natural ingredients.</p>
         </div>
-        <hr class="hairline gl-highlights__rule" />
         <div class="gl-highlights__item">
           <div class="gl-icon-circle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg>
           </div>
-          <h3>No shortcuts, no additives</h3>
-          <p>Flour, water, salt, time. That's the whole list for our breads.</p>
+          <h3>Baked Fresh Daily</h3>
+          <p>Freshly baked every single morning.</p>
         </div>
-        <hr class="hairline gl-highlights__rule" />
         <div class="gl-highlights__item">
           <div class="gl-icon-circle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 21h16M6 21V10a6 6 0 0 1 12 0v11"/><path d="M9 10h6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4-3-8-6-8-10.5A5.5 5.5 0 0 1 9.5 5c1 0 2 .5 2.5 1.3C12.5 5.5 13.5 5 14.5 5A5.5 5.5 0 0 1 20 10.5C20 15 16 18 12 21z"/></svg>
           </div>
-          <h3>From our oven to your table</h3>
-          <p>Everything you see was baked in this building, this morning.</p>
+          <h3>Made With Love</h3>
+          <p>Baked with passion and care.</p>
+        </div>
+        <div class="gl-highlights__item">
+          <div class="gl-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 16V7h9v9M12 10h5l4 4v2h-2"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="17.5" cy="17.5" r="1.6"/></svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Quick delivery to your doorstep.</p>
+        </div>
+        <div class="gl-highlights__item">
+          <div class="gl-icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+          </div>
+          <h3>Secure Payment</h3>
+          <p>100% secure and safe payments.</p>
         </div>
       </div>
     </section>
@@ -90,8 +93,9 @@
     <section class="gl-section">
       <div class="container">
         <div class="gl-section__head">
-          <h2>Best sellers</h2>
-          <a href="../shop/shop.html" class="gl-section__link">View shop</a>
+          <h2 class="gl-heading-caps">Our Best Sellers</h2>
+          <span class="gl-section__rule"></span>
+          <a href="../shop/shop.html" class="gl-section__link">View All →</a>
         </div>
       </div>
       <div class="gl-rail container" data-bestsellers>
@@ -102,41 +106,54 @@
     <!-- 4. SPECIAL OFFER — pulled from a Dashboard post (category: "offer").
          Your uncle creates/edits this from the Dashboard's Posts section;
          it shows up here automatically. Nothing here is hardcoded. -->
-    <section class="gl-offer" data-offer-section hidden>
-      <img class="gl-offer__media" data-offer-image alt="" />
-      <div class="container gl-offer__content">
-        <p class="gl-eyebrow gl-eyebrow--left" data-offer-eyebrow>Special offer</p>
-        <h2 data-offer-title></h2>
-        <p data-offer-body></p>
-        <a href="../shop/shop.html" class="btn btn-outline">See what qualifies</a>
+    <section class="gl-section">
+      <div class="container">
+        <div class="gl-offer-card" data-offer-section hidden>
+          <div class="gl-offer-card__text">
+            <p class="gl-eyebrow gl-eyebrow--left" data-offer-eyebrow>Special Offer</p>
+            <h2 data-offer-title></h2>
+            <p data-offer-body></p>
+            <a href="../shop/shop.html" class="btn btn-primary">Order Now →</a>
+          </div>
+          <div class="gl-offer-card__media">
+            <img data-offer-image alt="" />
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 5. WHY CHOOSE US -->
     <section class="gl-section">
       <div class="container gl-section--centered">
-        <h2>Why choose us</h2>
+        <h2 class="gl-heading-caps">Why Choose Us</h2>
         <div class="gl-why__grid">
           <div class="gl-why__item">
             <div class="gl-icon-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><path d="M6 11c0 3 2.5 5 6 5s6-2 6-5"/><path d="M9 21h6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 21V11c0-3 2.5-5 6-5s6 2 6 5v10"/><path d="M4 21h16"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
             </div>
-            <h3>Baked daily</h3>
-            <p>Nothing sits overnight. What doesn't sell by evening doesn't go out again tomorrow.</p>
+            <h3>Expert Bakers</h3>
+            <p>Our bakers are skilled, experienced and passionate.</p>
           </div>
           <div class="gl-why__item">
             <div class="gl-icon-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4-3-8-6-8-10.5A5.5 5.5 0 0 1 9.5 5c1 0 2 .5 2.5 1.3C12.5 5.5 13.5 5 14.5 5A5.5 5.5 0 0 1 20 10.5C20 15 16 18 12 21z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2c1 3-1 4-1 6a3 3 0 0 0 6 0c0-2-2-3-1-6-3 1-6 3-6 8a6 6 0 1 0 12 0c0-5-3-7-6-8h-4z"/></svg>
             </div>
-            <h3>Real ingredients</h3>
-            <p>Local flour, real butter, cane sugar. We can name every ingredient in every recipe.</p>
+            <h3>Premium Quality</h3>
+            <p>We use only the finest ingredients for best taste.</p>
           </div>
           <div class="gl-why__item">
             <div class="gl-icon-circle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="3.2"/><path d="M5 21c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="9" r="2.6"/><circle cx="16" cy="9" r="2.6"/><path d="M2.5 20c.5-3 2.6-5 5.5-5s5 2 5.5 5"/><path d="M10.5 20c.5-3 2.6-5 5.5-5s5 2 5.5 5"/></svg>
             </div>
-            <h3>Made by hand</h3>
-            <p>Shaped, scored, and watched through the window by the same hands every morning.</p>
+            <h3>Customer First</h3>
+            <p>Your satisfaction is our top priority.</p>
+          </div>
+          <div class="gl-why__item">
+            <div class="gl-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V5l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+            </div>
+            <h3>Trust &amp; Quality</h3>
+            <p>We ensure the best quality in everything we do.</p>
           </div>
         </div>
       </div>
@@ -146,7 +163,8 @@
     <section class="gl-section">
       <div class="container">
         <div class="gl-section__head">
-          <h2>Fresh from the oven</h2>
+          <h2 class="gl-heading-caps">Fresh From The Oven</h2>
+          <span class="gl-section__rule"></span>
         </div>
       </div>
       <div class="gl-fresh-gallery container">
@@ -163,7 +181,8 @@
     <section class="gl-section">
       <div class="container">
         <div class="gl-section__head">
-          <h2>From the bakery</h2>
+          <h2 class="gl-heading-caps">From The Bakery</h2>
+          <span class="gl-section__rule"></span>
         </div>
         <div class="gl-stories" data-stories>
           <!-- Populated by home.js from the backend. Empty/error state handled in JS. -->
