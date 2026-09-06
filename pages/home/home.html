@@ -36,18 +36,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
           <span class="gl-icon-btn__badge" data-cart-count>0</span>
         </button>
-        <button class="gl-navbar__menu-btn" type="button" aria-expanded="false" aria-controls="gl-mobile-menu" data-navbar-toggle>
-          <span></span><span></span><span></span>
-          <span class="sr-only">Menu</span>
-        </button>
       </div>
     </div>
-    <nav id="gl-mobile-menu" class="gl-navbar__mobile" aria-label="Mobile" data-mobile-menu>
-      <a href="home.html" data-nav="home">Home</a>
-      <a href="../shop/shop.html" data-nav="shop">Shop</a>
-      <a href="../about/about.html" data-nav="about">About</a>
-      <a href="../contact/contact.html" data-nav="contact">Contact</a>
-    </nav>
   </header>
 
   <main>
@@ -109,13 +99,15 @@
       </div>
     </section>
 
-    <!-- 4. SPECIAL OFFER -->
-    <section class="gl-offer">
-      <img src="../../assets/images/offer-croissant.jpg" alt="Special offer at The Golden Loaf" class="gl-offer__media" />
+    <!-- 4. SPECIAL OFFER — pulled from a Dashboard post (category: "offer").
+         Your uncle creates/edits this from the Dashboard's Posts section;
+         it shows up here automatically. Nothing here is hardcoded. -->
+    <section class="gl-offer" data-offer-section hidden>
+      <img class="gl-offer__media" data-offer-image alt="" />
       <div class="container gl-offer__content">
-        <p class="gl-eyebrow gl-eyebrow--left">This week only</p>
-        <h2>Buy two loaves,<br />bring home a third</h2>
-        <p>Applies to any bread on the shelf. Ends Sunday.</p>
+        <p class="gl-eyebrow gl-eyebrow--left" data-offer-eyebrow>Special offer</p>
+        <h2 data-offer-title></h2>
+        <p data-offer-body></p>
         <a href="../shop/shop.html" class="btn btn-outline">See what qualifies</a>
       </div>
     </section>
@@ -150,15 +142,20 @@
       </div>
     </section>
 
-    <!-- 6. FRESH FROM THE OVEN -->
+    <!-- 6. FRESH FROM THE OVEN (real bakery photography — not product data) -->
     <section class="gl-section">
       <div class="container">
         <div class="gl-section__head">
           <h2>Fresh from the oven</h2>
         </div>
       </div>
-      <div class="gl-rail container" data-fresh>
-        <!-- Populated by home.js from the backend. No hardcoded products. -->
+      <div class="gl-fresh-gallery container">
+        <img src="../../assets/images/fresh-1.jpg" alt="Fresh loaves cooling" loading="lazy" />
+        <img src="../../assets/images/fresh-2.jpg" alt="Pancakes with berries" loading="lazy" />
+        <img src="../../assets/images/fresh-3.jpg" alt="Cinnamon rolls" loading="lazy" />
+        <img src="../../assets/images/fresh-4.jpg" alt="Fresh cookies" loading="lazy" />
+        <img src="../../assets/images/fresh-5.jpg" alt="Pastry display tray" loading="lazy" />
+        <img src="../../assets/images/fresh-6.jpg" alt="Coffee with latte art" loading="lazy" />
       </div>
     </section>
 
