@@ -5,10 +5,15 @@
 
 .gl-footer__inner {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
   gap: var(--space-4);
   padding-top: var(--space-5);
   padding-bottom: var(--space-4);
+}
+
+.gl-footer__logo {
+  height: 52px;
+  width: auto;
 }
 
 .gl-footer__brand-mark {
@@ -18,9 +23,16 @@
 }
 
 .gl-footer__tagline {
-  margin-top: var(--space-1);
+  margin-top: var(--space-2);
   color: var(--text-faint);
   font-size: 0.9rem;
+  max-width: 32ch;
+}
+
+.gl-footer__social {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
 }
 
 .gl-footer__col {
@@ -49,9 +61,21 @@
   color: var(--text-faint);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
+  .gl-footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gl-footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
   .gl-footer__inner {
     grid-template-columns: 1fr;
     gap: var(--space-3);
+  }
+  .gl-footer__brand {
+    grid-column: auto;
   }
 }
